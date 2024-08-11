@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="imagenes/Imagen de WhatsApp 2024-08-11 a las 14.46.18_a2db62a9-Photoroom.png" alt="">
+        <h1>Gestión de Clientes</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <button class="dropdown-btn">Gestionar <span>&#9662;</span></button>
+            <div class="dropdown-container">
+                <ul>
+                    <li><a href="index.html">Reservas</a></li>
+                    <li><a href="abonos.html">Abonos</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="paquetes.html">Paquetes</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="habitaciones.htm">Habitaciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>Asociar/Desasociar Clientes</h2>
+            <input type="text" placeholder="Buscar clientes" class="form-group">
+            
+            <table>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Reserva Asociada</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <td>Carlos García</td>
+                    <td>Reserva #123</td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <!-- Repite las filas según sea necesario -->
+            </table>
+            <a href="#" class="btn">Asociar Cliente</a>
+            <a ref="#" class="btn">Desasociar Cliente</a>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var dropdown = document.querySelector(".dropdown-btn");
+        var dropdownContainer = document.querySelector(".dropdown-container");
+
+        dropdown.addEventListener("click", function() {
+            dropdownContainer.classList.toggle("show");
+            var arrow = dropdown.querySelector("span");
+            arrow.classList.toggle("rotate");
+        });
+    });
+</script>
+</html>
